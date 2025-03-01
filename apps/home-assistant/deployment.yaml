@@ -43,7 +43,6 @@ spec:
               name: home-assistant-dbus
             - mountPath: /media
               name: home-assistant-media
-            - 
         volumes:
           - name: home-assistant-config
             hostPath:
