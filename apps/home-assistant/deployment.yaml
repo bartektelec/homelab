@@ -33,4 +33,29 @@ spec:
           ports:
             - containerPort: 8123
           resources: {}
+          volumeMounts:
+            - mountPath: /config
+              name: home-assistant-config
+            - mountPath: /etc/localtime
+              name: home-assistant-localtime
+              readOnly: true
+            - mountPath: /run/dbus
+              name: home-assistant-dbus
+            - mountPath: /media
+              name: home-assistant-media
+            - 
+        volumes:
+          - name: home-assistant-config
+            hostPath:
+              path: /mnt/k8s/home-assistant/config
+          - name: home-assistant-localtime
+            persistentVolumeClaim:
+              claimName: home-assistant-localtime
+              readOnly: true
+          - name: home-assistant-dbus
+            hostPath:
+              path: /run/dbus
+          - name: home-assistant-media
+            hostPath:
+              path: /media/home-assistant
 status: {}
