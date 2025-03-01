@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: home-assistant
+  name: home-assistant
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: home-assistant
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: home-assistant
+    spec:
+      containers:
+      - image: docker.io/homeassistant/home-assistant:stable
+        name: home-assistant
+        ports:
+        - containerPort: 8123
+        resources: {}
+status: {}
