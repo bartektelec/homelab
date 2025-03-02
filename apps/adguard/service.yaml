@@ -11,6 +11,10 @@ spec:
       port: 3000
       targetPort: 3000
       name: http-initial
+    - protocol: UDP
+      port: 53
+      targetPort: 53
+      name: dns
   selector:
     app: adguard
   type: LoadBalancer
