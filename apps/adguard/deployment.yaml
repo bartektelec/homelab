@@ -27,6 +27,9 @@ spec:
             - containerPort: 53
               name: dns
               protocol: UDP
+            - containerPort: 80
+              name: http
+              protocol: TCP
           resources: {}
           volumeMounts:
             - mountPath: /opt/adguardhome/conf
