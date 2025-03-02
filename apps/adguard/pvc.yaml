@@ -12,7 +12,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: adguard-conf
+  name: adguard-config
 spec:
   accessModes:
     - ReadWriteOnce
