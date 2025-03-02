@@ -6,8 +6,6 @@ metadata:
     app: adguard
   name: adguard
 spec:
-  selector:
-    app: adguard
   ports:
     - protocol: TCP
       port: 3000
@@ -21,6 +19,8 @@ spec:
       port: 53
       targetPort: 53
       name: dns
+  selector:
+    app: adguard
   type: LoadBalancer
 status:
   loadBalancer: {}
