@@ -12,8 +12,8 @@ spec:
       targetPort: 3000
       name: http-initial
     - protocol: TCP
-      port: 80
-      targetPort: 8080
+      port: 8080
+      targetPort: 80
       name: http
     - protocol: UDP
       port: 53
