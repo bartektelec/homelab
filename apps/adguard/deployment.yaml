@@ -24,9 +24,6 @@ spec:
             - containerPort: 53
               name: dns
               protocol: UDP
-            - containerPort: 80
-              name: http
-              protocol: TCP
             - containerPort: 3000
               name: http-initial
               protocol: TCP
