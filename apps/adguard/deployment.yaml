@@ -27,7 +27,7 @@ spec:
             - containerPort: 53
               name: dns
               protocol: UDP
-            - containerPort: 80
+            - containerPort: 8080
               name: http
               protocol: TCP
           resources: {}
