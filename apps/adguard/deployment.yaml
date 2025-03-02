@@ -18,11 +18,8 @@ spec:
         app: adguard
     spec:
       containers:
-        - image: adguard/adguardhome:v0.107.57
+        - image: adguard/adguardhome
           name: adguard
-          env:
-            - name: "PYTHONPATH"
-              value: "/config/deps"
           ports:
             - containerPort: 53
               protocol: TCP
