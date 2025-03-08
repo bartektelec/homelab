@@ -5,7 +5,7 @@ metadata:
   labels:
     app: home-assistant
   name: home-assistant
-  namespace: homelab
+  namespace: home-assistant
 spec:
   ports:
     - name: 8123-8123

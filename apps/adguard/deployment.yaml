@@ -5,7 +5,7 @@ metadata:
   labels:
     app: adguard
   name: adguard
-  namespace: homelab
+  namespace: adguard
 spec:
   replicas: 1
   selector:

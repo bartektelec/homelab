@@ -5,7 +5,7 @@ metadata:
   labels:
     app: home-assistant
   name: home-assistant
-  namespace: homelab
+  namespace: home-assistant
 spec:
   replicas: 1
   selector:
