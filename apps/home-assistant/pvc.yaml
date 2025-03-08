@@ -4,6 +4,7 @@ metadata:
   name: home-assistant-localtime
   labels:
     app: home-assistant
+  namespace: homelab
 spec:
   accessModes:
     - ReadWriteOnce
