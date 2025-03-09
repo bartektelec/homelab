@@ -31,7 +31,6 @@ spec:
             - controller
           env: []
           image: docker.io/bitnami/sealed-secrets-controller:0.28.0
-          imagePullPolicy: IfNotPresent
           livenessProbe:
             httpGet:
               path: /healthz
