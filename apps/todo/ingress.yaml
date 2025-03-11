@@ -12,9 +12,9 @@ spec:
       http:
         paths:
           - path: /todo
-            pathType: Exact
+            pathType: Prefix
             backend:
               service:
                 name: todo
                 port:
-                  number: 80
+                  number: 8000
