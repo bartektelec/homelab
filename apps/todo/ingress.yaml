@@ -4,7 +4,7 @@ metadata:
   name: todo
   namespace: default
   annotations:
-    kuberenetes.io/ingress.class: "traefik"
+    spec.ingressClassName: traefik
 
 spec:
   rules:
