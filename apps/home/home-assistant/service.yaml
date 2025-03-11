@@ -8,12 +8,11 @@ metadata:
   namespace: home-assistant
 spec:
   ports:
-    - name: 8123-8123
+    - name: http
       port: 8123
       protocol: TCP
-      targetPort: 8123
   selector:
     app: home-assistant
-  type: LoadBalancer
+  type: ClusterIP
 status:
   loadBalancer: {}
