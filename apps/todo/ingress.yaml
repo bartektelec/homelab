@@ -6,11 +6,11 @@ metadata:
 
 spec:
   rules:
-    - host: todo.local
+    - host: localhost
       http:
         paths:
-          - path: /
-            pathType: Prefix
+          - path: /todo
+            pathType: Exact
             backend:
               service:
                 name: todo
