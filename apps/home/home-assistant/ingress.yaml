@@ -5,7 +5,6 @@ metadata:
   namespace: home-assistant
   annotations:
     spec.ingressClassName: traefik
-    traefik.ingress.kubernetes.io/router.entrypoints: websecure
 
 spec:
   rules:
