@@ -8,10 +8,10 @@ metadata:
 
 spec:
   rules:
-    - host: 10.0.0.103.nip.io
+    - host: home.10.0.0.103.nip.io
       http:
         paths:
-          - path: /home
+          - path: /
             pathType: Prefix
             backend:
               service:
