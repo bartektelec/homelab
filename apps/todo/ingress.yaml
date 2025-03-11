@@ -3,16 +3,16 @@ kind: Ingress
 metadata:
   name: todo
   namespace: default
+  annotations:
+    kuberenetes.io/ingress.class: "traefik"
 
 spec:
   rules:
-    - host: localhost
-      http:
+    - http:
         paths:
           - path: /todo
-            pathType: Exact
             backend:
               service:
                 name: todo
                 port:
-                  number: 8000
+                  number: 80
