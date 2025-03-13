@@ -16,4 +16,4 @@ spec:
               service:
                 name: uptime-kuma
                 port:
-                  number: 3001
+                  number: 80
