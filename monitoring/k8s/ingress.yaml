@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: traefik-dashboard
+  name: k8s-dashboard
   namespace: kube-system
   annotations:
     spec.ingressClassName: traefik
@@ -10,10 +10,10 @@ spec:
     - host: monitoring.10.0.0.103.nip.io
       http:
         paths:
-          - path: /traefik
+          - path: /k8s
             pathType: Prefix
             backend:
               service:
-                name: traefik-dashboard
+                name: headlamp
                 port:
-                  number: 9000
+                  number: 80
