@@ -7,10 +7,10 @@ metadata:
     spec.ingressClassName: traefik
 spec:
   rules:
-    - host: monitoring.10.0.0.103.nip.io
+    - host: monitor.10.0.0.103.nip.io
       http:
         paths:
-          - path: /k8s
+          - path: /
             pathType: Prefix
             backend:
               service:
