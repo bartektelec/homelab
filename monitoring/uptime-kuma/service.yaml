@@ -8,7 +8,6 @@ spec:
   ports:
     - protocol: TCP
       port: 3001
+      targetPort: 3001
       name: http
-  type: ClusterIP
-status:
-  loadBalancer: {}
+  type: LoadBalancer
