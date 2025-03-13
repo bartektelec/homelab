@@ -7,7 +7,6 @@ spec:
     app: uptime-kuma
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 3001
+      port: 3001
       name: http
-  type: LoadBalancer
+  type: ClusterIP
