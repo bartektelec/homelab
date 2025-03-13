@@ -27,7 +27,6 @@ spec:
           volumeMounts:
             - mountPath: /app/data
               name: uptime-kuma-data
-          restartPolicy: Always
       volumes:
         - name: uptime-kuma-data
           persistentVolumeClaim:
