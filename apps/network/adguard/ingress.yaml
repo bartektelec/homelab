@@ -18,3 +18,35 @@ spec:
                 name: adguard
                 port:
                   number: 8080
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: adguard-tailscale
+  namespace: adguard
+  annotations:
+    spec.ingressClassName: tailscale
+
+spec:
+  ingressClassName: tailscale
+  rules:
+    - host: adguard.deer-truck.ts.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: adguard
+                port:
+                  number: 8080
+    - host: dns.deer-truck.ts.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: adguard
+                port:
+                  number: 53
