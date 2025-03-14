@@ -39,7 +39,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: adguard
+                name: adguard-dashboard
                 port:
                   number: 8080
     - http:
@@ -48,6 +48,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: adguard
+                name: adguard-dns
                 port:
                   number: 53
