@@ -29,19 +29,20 @@ metadata:
 
 spec:
   ingressClassName: tailscale
+  tls:
+    - hosts:
+        - adguard.deer-truck.ts.net
   rules:
-    - host: adguard.deer-truck.ts.net
-      http:
+    - http:
         paths:
-          - path: /
+          - path: /dashboard
             pathType: Prefix
             backend:
               service:
                 name: adguard
                 port:
                   number: 8080
-    - host: dns.deer-truck.ts.net
-      http:
+    - http:
         paths:
           - path: /
             pathType: Prefix
