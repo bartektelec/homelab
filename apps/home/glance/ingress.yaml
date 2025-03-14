@@ -7,11 +7,17 @@ metadata:
     spec.ingressClassName: traefik
 
 spec:
-  defaultBackend:
-    service:
-      name: glance
-      port:
-        number: 8080
+  rules:
+    - host: 10.0.0.103.nip.io
+      http:
+        paths:
+          - path: /glance
+            pathType: Prefix
+            backend:
+              service:
+                name: glance
+                port:
+                  number: 8080
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -20,11 +26,13 @@ metadata:
   namespace: glance
 spec:
   ingressClassName: tailscale
-  tls:
-    - hosts:
-        - deer-truck.ts.net
-  defaultBackend:
-    service:
-      name: glance
-      port:
-        number: 8080
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: glance
+                port:
+                  number: 8080

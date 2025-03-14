@@ -19,7 +19,7 @@ spec:
         app: glance
     spec:
       containers:
-        - image: glanceapp/glance:latest
+        - image: glanceapp/glance
           name: glance
           ports:
             - containerPort: 8080
