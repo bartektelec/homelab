@@ -18,6 +18,7 @@ spec:
       labels:
         app: adguard
     spec:
+      hostNetwork: true
       containers:
         - name: tailscaled
           image: tailscale/tailscale:latest
@@ -29,9 +30,9 @@ spec:
             privileged: true
           env:
             - name: TS_ACCEPT_DNS
-              value: false
+              value: "false"
             - name: TS_AUTH_ONCE
-              value: true
+              value: "true"
           volumeMounts:
             - name: tailscaled-var-lib
               mountPath: /var/lib
