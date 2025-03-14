@@ -5,6 +5,7 @@ metadata:
   namespace: tailscale
 spec:
   hostname: tailscale-connector
+  exitNode: true
   subnetRouter:
     advertiseRoutes:
       - "10.40.0.0/14"
