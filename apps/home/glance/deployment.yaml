@@ -33,3 +33,6 @@ spec:
         - name: glance-config-dir
           persistentVolumeClaim:
             claimName: glance-config
+        - name: glance-configmap
+          configMap:
+            name: glance-configmap
