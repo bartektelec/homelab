@@ -18,27 +18,7 @@ spec:
       labels:
         app: adguard
     spec:
-      hostNetwork: true
-      serviceAccountName: tailscale
       containers:
-        - name: tailscaled
-          image: tailscale/tailscale:latest
-          securityContext:
-            capabilities:
-              add:
-                - NET_ADMIN
-                - NET_RAW
-            privileged: true
-          env:
-            - name: TS_ACCEPT_DNS
-              value: "false"
-            - name: TS_AUTH_ONCE
-              value: "true"
-          volumeMounts:
-            - name: tailscaled-var-lib
-              mountPath: /var/lib
-            - name: tailscaled-net-tun
-              mountPath: /dev/net/tun
         - image: adguard/adguardhome:v0.107.57
           name: adguard
           ports:
@@ -64,11 +44,4 @@ spec:
         - name: adguard-config
           persistentVolumeClaim:
             claimName: adguard-config
-        - name: tailscaled-var-lib
-          persistentVolumeClaim:
-            claimName: tailscaled-var-lib
-        - name: tailscaled-net-tun
-          hostPath:
-            path: /dev/net/tun
-            type: CharDevice
 status: {}
