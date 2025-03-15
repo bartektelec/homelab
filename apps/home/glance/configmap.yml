@@ -41,28 +41,31 @@ data:
                 search-engine: https://search.brave.com/search?q={QUERY}
                 autofocus: true
 
-              - type: monitor
-                cache: 1m
-                title: Services
-                sites:
-                  # - title: Jellyfin
-                  #   url: https://yourdomain.com/
-                  #   icon: si:adguard
-                  # - title: Gitea
-                  #   url: https://yourdomain.com/
-                  #   icon: si:gitea
-                  # - title: qBittorrent # only for Linux ISOs, of course
-                  #   url: https://yourdomain.com/
-                  #   icon: si:qbittorrent
-                  # - title: Immich
-                  #   url: https://yourdomain.com/
-                    # icon: si:immich
-                  - title: AdGuard Home
-                    url: https://adguard.10.0.0.103.nip.io/
-                    icon: si:adguard
-                  # - title: Vaultwarden
-                  #   url: https://yourdomain.com/
-                  #   icon: si:vaultwarden
+              - type: split-column
+                widgets:
+                  - type: monitor
+                    cache: 1m
+                    title: Services
+                    sites:
+                      - title: Home Assistant
+                        url: http://home.10.0.0.103.nip.io/
+                        icon: si:homeassistant
+                      - title: AdGuard Home
+                        url: http://adguard.10.0.0.103.nip.io/
+                        icon: si:adguard
+                  - type: monitor
+                    cache: 1m
+                    title: Services
+                    sites:
+                      - title: Uptime Kuma
+                        url: http://uptime.10.0.0.103.nip.io/
+                        icon: si:uptimekuma
+                      - title: Traefik
+                        url: http://traefik.10.0.0.103.nip.io/dashboard/
+                        icon: si:traefikproxy
+                      - title: Headlamp
+                        url: http://monitor.10.0.0.103.nip.io/
+                        icon: si:kubernetes
               - type: group
                 widgets:
                   - type: hacker-news
