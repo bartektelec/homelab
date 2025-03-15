@@ -27,7 +27,7 @@ metadata:
 spec:
   tls:
     - hosts:
-        - home.deer-truck.ts.net
+        - glance.deer-truck.ts.net
   ingressClassName: tailscale
   rules:
     - http:
