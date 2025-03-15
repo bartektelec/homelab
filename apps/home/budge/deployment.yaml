@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: budge
+  namespace: budge
+  labels:
+    app: budge
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: budge
+  template:
+    metadata:
+      labels:
+        app: budge
+    spec:
+      containers:
+        - name: budge
+          image: lscr.io/linuxserver/budge:latest
+          env:
+            - name: PUID
+              value: "1000"
+            - name: PGID
+              value: "1000"
+            - name: TZ
+              value: "Europe/Oslo"
+          volumeMounts:
+            - mountPath: /config
+              name: config-volume
+          ports:
+            - containerPort: 80
+            - containerPort: 443
+      volumes:
+        - name: config-volume
+          persistentVolumeClaim:
+            claimName: budge-pvc

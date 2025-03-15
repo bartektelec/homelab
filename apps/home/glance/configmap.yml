@@ -45,7 +45,7 @@ data:
                 widgets:
                   - type: monitor
                     cache: 1m
-                    title: Services
+                    title: Apps
                     sites:
                       - title: Home Assistant
                         url: http://home.10.0.0.103.nip.io/
@@ -55,7 +55,7 @@ data:
                         icon: si:adguard
                   - type: monitor
                     cache: 1m
-                    title: Services
+                    title: Maintenance
                     sites:
                       - title: Uptime Kuma
                         url: http://uptime.10.0.0.103.nip.io/
