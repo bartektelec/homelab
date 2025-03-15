@@ -120,10 +120,12 @@ data:
                     name: Apple
                   - symbol: MSFT
                     name: Microsoft
-                  - symbol: OSL-DNB
+                  - symbol: DNB.OL
                     name: DNB
-                  - symbol: OSL-KOG
-                    name: Kongsberg
+                  - symbol: KOG.OL
+                    name: Kongsberg Gruppen
+                  - symbol: NOD.OL
+                    name: Nordic Semiconductor
 
               # - type: releases
               #   cache: 1d
