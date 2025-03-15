@@ -4,9 +4,8 @@ metadata:
   name: budge-traefik
   namespace: budge
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    spec.ingressClassName: traefik
 spec:
-  ingressClassName: traefik
   rules:
     - host: budge.10.0.0.103.nip.io
       http:
@@ -18,9 +17,6 @@ spec:
                 name: budge
                 port:
                   number: 80
-  tls:
-    - hosts:
-        - budge.your-traefik-domain.com
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
