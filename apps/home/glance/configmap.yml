@@ -6,6 +6,66 @@ metadata:
 data:
   glance.yml: |
     pages:
+      - name: Startpage
+        width: slim
+        hide-desktop-navigation: true
+        center-vertically: true
+        columns:
+          - size: full
+            widgets:
+              - type: search
+                search-engine: https://search.brave.com/search?q={QUERY}
+                autofocus: true
+
+              - type: monitor
+                cache: 1m
+                title: Services
+                sites:
+                  # - title: Jellyfin
+                  #   url: https://yourdomain.com/
+                  #   icon: si:adguard
+                  # - title: Gitea
+                  #   url: https://yourdomain.com/
+                  #   icon: si:gitea
+                  # - title: qBittorrent # only for Linux ISOs, of course
+                  #   url: https://yourdomain.com/
+                  #   icon: si:qbittorrent
+                  # - title: Immich
+                  #   url: https://yourdomain.com/
+                    # icon: si:immich
+                  - title: AdGuard Home
+                    url: https://adguard.10.0.0.103.nip.io/
+                    icon: si:adguard
+                  # - title: Vaultwarden
+                  #   url: https://yourdomain.com/
+                  #   icon: si:vaultwarden
+
+              - type: bookmarks
+                groups:
+                  - title: General
+                    links:
+                      - title: Gmail
+                        url: https://mail.google.com/mail/u/0/
+                      - title: Amazon
+                        url: https://www.amazon.com/
+                      - title: Github
+                        url: https://github.com/
+                  - title: Entertainment
+                    links:
+                      - title: YouTube
+                        url: https://www.youtube.com/
+                      - title: Prime Video
+                        url: https://www.primevideo.com/
+                      - title: Disney+
+                        url: https://www.disneyplus.com/
+                  - title: Social
+                    links:
+                      - title: Reddit
+                        url: https://www.reddit.com/
+                      - title: Twitter
+                        url: https://twitter.com/
+                      - title: Instagram
+                        url: https://www.instagram.com/
       - name: Home
         # Optionally, if you only have a single page you can hide the desktop navigation for a cleaner look
         # hide-desktop-navigation: true
@@ -23,7 +83,6 @@ data:
                   - url: https://selfh.st/rss/
                     title: selfh.st
                     limit: 4
-                  - url: https://ciechanow.ski/atom.xml
                   - url: https://www.joshwcomeau.com/rss.xml
                     title: Josh Comeau
                   - url: https://samwho.dev/rss.xml
@@ -36,9 +95,6 @@ data:
                   - j_blow
                   - piratesoftware
                   - cohhcarnage
-                  - christitustech
-                  - EJ_SA
-
           - size: full
             widgets:
               - type: group
@@ -48,27 +104,30 @@ data:
 
               - type: videos
                 channels:
+                  - UCUyeluBRhGPCW4rPe_UvBZQ # ThePrimeTime
+                  - UCpHDppEe092QBhOtSxJTMqw # Early Morning Dev
                   - UCXuqSBlHAE6Xw-yeJA0Tunw # Linus Tech Tips
                   - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
                   - UCsBjURrPoezykLs9EqgamOA # Fireship
-                  - UCBJycsmduvYEL83R_U4JriQ # Marques Brownlee
-                  - UCHnyfMqiRRG1u-2MsSQLbXA # Veritasium
 
               - type: group
                 widgets:
                   - type: reddit
-                    subreddit: technology
+                    subreddit: webdev
                     show-thumbnails: true
                   - type: reddit
                     subreddit: selfhosted
+                    show-thumbnails: true
+                  - type: reddit
+                    subreddit: homeassistant
                     show-thumbnails: true
 
           - size: small
             widgets:
               - type: weather
-                location: London, United Kingdom
-                units: metric # alternatively "imperial"
-                hour-format: 12h # alternatively "24h"
+                location: Oslo, Norway
+                units: metric 
+                hour-format: 24h # alternatively "24h"
                 # Optionally hide the location from being displayed in the widget
                 # hide-location: true
 
@@ -79,6 +138,8 @@ data:
                 markets:
                   - symbol: SPY
                     name: S&P 500
+                  - symbol: QQQ
+                    name: NASDAQ 100
                   - symbol: BTC-USD
                     name: Bitcoin
                   - symbol: NVDA
@@ -87,17 +148,21 @@ data:
                     name: Apple
                   - symbol: MSFT
                     name: Microsoft
+                  - symbol: OSL-DNB
+                    name: DNB
+                  - symbol: OSL-KOG
+                    name: Kongsberg
 
-              - type: releases
-                cache: 1d
-                # Without authentication the Github API allows for up to 60 requests per hour. You can create a
-                # read-only token from your Github account settings and use it here to increase the limit.
-                # token: ...
-                repositories:
-                  - glanceapp/glance
-                  - go-gitea/gitea
-                  - immich-app/immich
-                  - syncthing/syncthing
+              # - type: releases
+              #   cache: 1d
+              #   # Without authentication the Github API allows for up to 60 requests per hour. You can create a
+              #   # read-only token from your Github account settings and use it here to increase the limit.
+              #   # token: ...
+              #   repositories:
+              #     - glanceapp/glance
+              #     - go-gitea/gitea
+              #     - immich-app/immich
+              #     - syncthing/syncthing
 
       # Add more pages here:
       # - name: Your page name
