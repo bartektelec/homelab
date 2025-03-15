@@ -25,6 +25,9 @@ metadata:
   name: glance-tailscale
   namespace: glance
 spec:
+  tls:
+    - hosts:
+        - home.deer-truck.ts.net
   ingressClassName: tailscale
   rules:
     - http:
