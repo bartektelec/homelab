@@ -11,7 +11,7 @@ I started by building the server out of two Raspberry Pis, these were fine for h
 Not only that but adding more Raspberry Pis in 2025 gets quite expensive pretty quickly, a Raspberry Pi is no longer a cheap single board computer that would let people play with hardware and software for low cost, instead a 4GB Pi 5 model costs around 800 NOK (aprox. 75 USD), that is without Power supply, MicroSD card and case.
 
 Later I figured there is a huge market for used small form-factor PCs / thin clients.
-These may not sound very performant but are usually a good value for a buck.
+These may not sound very performant but are usually a good value for the buck.
 
 First one I bought was a HP ProDesk 600 G1 - sure, it is over 10 years old, but for 600 NOK (aprox. 55 USD) I've got a 4 Core CPU, 8GB memory, 250GB SSD PC that doesn't need much power to run and is built on top of x86 which is way more compatible with most software than ARM-based architecture.
 
@@ -28,7 +28,9 @@ First one I bought was a HP ProDesk 600 G1 - sure, it is over 10 years old, but 
 
 I am attempting to follow GitOps good practices, learning a lot on the way.
 Kubescape is used as a linter to scan the manifest files in order to find security vulnerabilities.
+
 All secrets are encrypted used the "SealedSecrets" method. Encryption happens by utilizing the `publickey.peb` certificate and running `kubeseal --cert [path_to_cert] -o yaml -n [namespace] < [path_to_secret_file].yaml > [path_to_output_file].yaml`.
+
 Additionally, to keep myself from exposing raw secrets to the public, any file called `secret.yaml` is ignored by git.
 
 ## 💾 Installed applications and tools
@@ -63,4 +65,14 @@ Tools that help managing my cluster and deploy apps in a secure way
 | 🤐 SealedSecrets | An operator that decrypts my encrypted secret files |
 | 🚇 Tailscale     | Operator for using Tailscale as an Ingress type     |
 | 🦆 DuckDNS       | A tiny DynDNS watcher                               |
+
+## Honorable mentions and inspirations
+
+I have gotten some inspirations, ideas to what apps to host and how to structure things by peeking at other's repositories and YouTube videos from time to time. I have learned a lot about Kuberenets, Linux and hardware from them and I think they deserve a cred.
+[Mischa van den Burg](https://github.com/mischavandenburg/homelab)
+[/gruberdev](https://github.com/gruberdev/homelab)
+[DevOps Toolbox](https://www.youtube.com/@devopstoolbox)
+[Jim's Garage](https://www.youtube.com/@Jims-Garage)
+[Christian Lempa](https://www.youtube.com/@christianlempa)
+[Hardware Haven](https://www.youtube.com/@HardwareHaven)
 
