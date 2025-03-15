@@ -53,6 +53,9 @@ data:
                       - title: AdGuard Home
                         url: http://adguard.10.0.0.103.nip.io/
                         icon: si:adguard
+                      - title: Budge
+                        url: http://budge.10.0.0.103.nip.io/
+                        icon: si:cashapp
                   - type: monitor
                     cache: 1m
                     title: Maintenance
