@@ -1,0 +1,1 @@
+kubescape scan *.yaml
