@@ -8,10 +8,10 @@ metadata:
 
 spec:
   rules:
-    - host: 10.0.0.103.nip.io
+    - host: glance.10.0.0.103.nip.io
       http:
         paths:
-          - path: /glance
+          - path: /
             pathType: Prefix
             backend:
               service:
