@@ -1,6 +1,6 @@
 # 🏡 homelab
 
-This repo hosts the desired state of my homelab kubernetes cluster. The cluster runs ArgoCD application that pulls the most recent changes and applies them to the cluster automatically.
+This repo hosts the desired state of my homelab kubernetes cluster. The cluster runs ArgoCD application that monitors the repository for recent changes and applies them to the cluster automatically.
 
 ## ❓Why Homelab
 
@@ -13,7 +13,7 @@ Not only that but adding more Raspberry Pis in 2025 gets quite expensive pretty 
 Later I figured there is a huge market for used small form-factor PCs / thin clients.
 These may not sound very performant but are usually a good value for a buck.
 
-First one I bought was a HP ProDesk 600 G1 - sure, it is over 10 years old, but for 600 NOK (aprox. 55 USD) I've got a 8GB Ram, 250GB SSD, 4 Core PC that doesn't need much power to run and is built on top of x86 which is way more compatible with most software than ARM-based solutions are.
+First one I bought was a HP ProDesk 600 G1 - sure, it is over 10 years old, but for 600 NOK (aprox. 55 USD) I've got a 4 Core CPU, 8GB memory, 250GB SSD PC that doesn't need much power to run and is built on top of x86 which is way more compatible with most software than ARM-based architecture.
 
 ## 💻 Hardware
 
