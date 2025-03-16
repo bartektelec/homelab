@@ -1,0 +1,40 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: actual-traefik
+  namespace: actual
+  annotations:
+    spec.ingressClassName: actual
+spec:
+  rules:
+    - host: actual.10.0.0.103.nip.io
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: actual
+                port:
+                  number: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: actual-tailscale
+  namespace: actual
+spec:
+  ingressClassName: tailscale
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: actual
+                port:
+                  number: 5006
+  tls:
+    - hosts:
+        - actual.deer-truck.ts.net

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: actual
+  namespace: actual
+  labels:
+    app: actual
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: actual
+  template:
+    metadata:
+      labels:
+        app: actual
+    spec:
+      containers:
+        - name: actual
+          image: ghcr.io/actualbudget/actual:latest-alpine
+          volumeMounts:
+            - mountPath: /data
+              name: actual-data
+          ports:
+            - containerPort: 5006
+      volumes:
+        - name: actual-data
+          persistentVolumeClaim:
+            claimName: budge-pvc

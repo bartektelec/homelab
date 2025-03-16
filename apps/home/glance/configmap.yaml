@@ -56,6 +56,9 @@ data:
                       - title: Budge
                         url: http://budge.10.0.0.103.nip.io/
                         icon: si:cashapp
+                      - title: Actual Budget
+                        url: http://actual.10.0.0.103.nip.io/
+                        icon: si:actualbudget
                   - type: monitor
                     cache: 1m
                     title: Maintenance
