@@ -16,7 +16,7 @@ spec:
               service:
                 name: actual
                 port:
-                  number: 80
+                  number: 5006
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
