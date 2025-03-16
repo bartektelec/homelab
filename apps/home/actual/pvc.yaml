@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: actual-data
+  name: actual-pvc
   namespace: actual
 spec:
   accessModes:
