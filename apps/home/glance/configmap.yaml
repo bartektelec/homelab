@@ -29,12 +29,15 @@ data:
                   - url: https://ishadeed.com/feed.xml
                     title: Ahmad Shadeed
 
-              - type: twitch-channels
+              - type: videos
                 channels:
-                  - theprimeagen
-                  - j_blow
-                  - piratesoftware
-                  - cohhcarnage
+                  - UCUyeluBRhGPCW4rPe_UvBZQ # ThePrimeTime
+                  - UCpHDppEe092QBhOtSxJTMqw # Early Morning Dev
+                  - UCXuqSBlHAE6Xw-yeJA0Tunw # Linus Tech Tips
+                  - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
+                  - UCsBjURrPoezykLs9EqgamOA # Fireship
+
+
           - size: full
             widgets:
               - type: search
@@ -76,14 +79,6 @@ data:
                 widgets:
                   - type: hacker-news
                   - type: lobsters
-
-              - type: videos
-                channels:
-                  - UCUyeluBRhGPCW4rPe_UvBZQ # ThePrimeTime
-                  - UCpHDppEe092QBhOtSxJTMqw # Early Morning Dev
-                  - UCXuqSBlHAE6Xw-yeJA0Tunw # Linus Tech Tips
-                  - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
-                  - UCsBjURrPoezykLs9EqgamOA # Fireship
 
               - type: group
                 widgets:
