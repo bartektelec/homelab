@@ -18,10 +18,10 @@ spec:
                 name: home-assistant
                 port:
                   number: 8123
-    - host: bartektelechome.duckdns.org
+    - host: home.bartektelechome.duckdns.org
       http:
         paths:
-          - path: /home
+          - path: /
             pathType: Prefix
             backend:
               service:
