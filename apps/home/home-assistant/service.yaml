@@ -13,6 +13,6 @@ spec:
       protocol: TCP
   selector:
     app: home-assistant
-  type: ClusterIP
+  type: LoadBalancer
 status:
   loadBalancer: {}
