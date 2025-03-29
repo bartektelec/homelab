@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zigbee2mqtt
+  namespace: z2m
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zigbee2mqtt
+  template:
+    metadata:
+      labels:
+        app: zigbee2mqtt
+    spec:
+      nodeSelector:
+        zigbee: "true"
+      containers:
+        - name: zigbee2mqtt
+          image: koenkk/zigbee2mqtt:latest
+          env:
+            - name: TZ
+              value: Europe/Oslo
+            - name: ZIGBEE2MQTT_CONFIG_MQTT_SERVER
+              value: "mqtt://mqtt.10.0.0.103"
+            # - name: ZIGBEE2MQTT_CONFIG_MQTT_USER
+            #   value: "user"
+            # - name: ZIGBEE2MQTT_CONFIG_MQTT_PASSWORD
+            #   value: "password"
+            - name: ZIGBEE2MQTT_CONFIG_HOMEASSISTANT
+              value: "true"
+            - name: ZIGBEE2MQTT_CONFIG_SERIAL_ADAPTER
+              value: "deconz"
+            - name: ZIGBEE2MQTT_CONFIG_SERIAL_PORT
+              value: "/dev/ttyACM0"
+          securityContext:
+            privileged: true
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - name: z2m-data
+              mountPath: /app/data
+            - name: z2m-udev
+              mountPath: /run/udev
+            - name: ttyacm
+              mountPath: /dev/ttyACM0
+      volumes:
+        - name: z2m-data
+          persistentVolumeClaim:
+            claimName: z2m-data
+        - name: z2m-udev
+          hostPath:
+            path: /run/udev
+        - name: ttyacm
+          hostPath:
+            path: /dev/ttyACM0
