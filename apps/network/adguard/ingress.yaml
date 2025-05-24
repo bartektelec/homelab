@@ -8,7 +8,7 @@ metadata:
 
 spec:
   rules:
-    - host: adguard.homelab.local
+    - host: adguard.10.0.0.201.nip.io
       http:
         paths:
           - path: /
