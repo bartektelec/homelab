@@ -18,6 +18,16 @@ spec:
                 name: home-assistant
                 port:
                   number: 8123
+    - host: homelab.local
+      http:
+        paths:
+          - path: /home-assistant
+            pathType: Prefix
+            backend:
+              service:
+                name: home-assistant
+                port:
+                  number: 8123
     - host: home.bartektelechome.duckdns.org
       http:
         paths:
