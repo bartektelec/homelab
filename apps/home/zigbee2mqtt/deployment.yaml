@@ -22,7 +22,7 @@ spec:
             - name: TZ
               value: Europe/Oslo
             - name: ZIGBEE2MQTT_CONFIG_MQTT_SERVER
-              value: "mqtt://mqtt.10.0.0.103"
+              value: "mqtt://mqtt.homelab.local"
             # - name: ZIGBEE2MQTT_CONFIG_MQTT_USER
             #   value: "user"
             # - name: ZIGBEE2MQTT_CONFIG_MQTT_PASSWORD

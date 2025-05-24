@@ -6,7 +6,7 @@ metadata:
     spec.ingressClassName: traefik
 spec:
   rules:
-    - host: uptime.10.0.0.103.nip.io
+    - host: uptime.homelab.local
       http:
         paths:
           - path: /

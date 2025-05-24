@@ -51,29 +51,29 @@ data:
                     title: Apps
                     sites:
                       - title: Home Assistant
-                        url: http://home.10.0.0.103.nip.io/
+                        url: http://home.homelab.local/
                         icon: si:homeassistant
                       - title: AdGuard Home
-                        url: http://adguard.10.0.0.103.nip.io/
+                        url: http://adguard.homelab.local/
                         icon: si:adguard
                       - title: Budge
-                        url: http://budge.10.0.0.103.nip.io/
+                        url: http://budge.homelab.local/
                         icon: si:cashapp
                       - title: Actual Budget
-                        url: http://actual.10.0.0.103.nip.io/
+                        url: http://actual.homelab.local/
                         icon: si:actualbudget
                   - type: monitor
                     cache: 1m
                     title: Maintenance
                     sites:
                       - title: Uptime Kuma
-                        url: http://uptime.10.0.0.103.nip.io/
+                        url: http://uptime.homelab.local/
                         icon: si:uptimekuma
                       - title: Traefik
-                        url: http://traefik.10.0.0.103.nip.io/dashboard/
+                        url: http://traefik.homelab.local/dashboard/
                         icon: si:traefikproxy
                       - title: Headlamp
-                        url: http://monitor.10.0.0.103.nip.io/
+                        url: http://monitor.homelab.local/
                         icon: si:kubernetes
               - type: group
                 widgets:

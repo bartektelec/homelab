@@ -8,7 +8,7 @@ metadata:
 
 spec:
   rules:
-    - host: glance.10.0.0.103.nip.io
+    - host: glance.homelab.local
       http:
         paths:
           - path: /
