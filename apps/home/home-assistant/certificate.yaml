@@ -1,0 +1,18 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: home-cert
+  namespace: home-assistant
+spec:
+  secretName: home-cert
+  duration: 2160h # 90d
+  renewBefore: 360h # 15d
+  subject:
+    organizations:
+      - HomeLab
+  commonName: home-assistant.10.0.0.201.nip.io
+  dnsNames:
+    - home-assistant.10.0.0.201.nip.io
+  issuerRef:
+    name: selfsigned
+    kind: ClusterIssuer

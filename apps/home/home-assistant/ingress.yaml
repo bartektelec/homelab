@@ -5,6 +5,7 @@ metadata:
   namespace: home-assistant
   annotations:
     spec.ingressClassName: traefik
+    cert-manager.io/cluster-issuer: selfsigned
 spec:
   rules:
     - host: home-assistant.10.0.0.201.nip.io
@@ -27,6 +28,10 @@ spec:
                 name: home-assistant
                 port:
                   number: 8123
+  tls:
+    - hosts:
+        - home-assistant.10.0.0.201.nip.io
+      secretName: home-cert
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
