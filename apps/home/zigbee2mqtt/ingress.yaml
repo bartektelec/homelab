@@ -8,7 +8,7 @@ metadata:
 
 spec:
   rules:
-    - host: z2m.homelab.local
+    - host: z2m.home.io
       http:
         paths:
           - path: /

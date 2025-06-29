@@ -8,7 +8,7 @@ metadata:
     cert-manager.io/cluster-issuer: selfsigned
 spec:
   rules:
-    - host: home-assistant.10.0.0.201.nip.io
+    - host: home-assistant.home.io
       http:
         paths:
           - path: /

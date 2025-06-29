@@ -7,7 +7,7 @@ metadata:
     spec.ingressClassName: actual
 spec:
   rules:
-    - host: actual.homelab.local
+    - host: actual.home.io
       http:
         paths:
           - path: /
