@@ -15,5 +15,7 @@ data:
     listener 8883
     protocol mqtt
 
-    allow_anonymous true
-    # password_file /mosquitto/password/password.txt
+    allow_anonymous false
+    password_file /mosquitto/password/password.txt
+  password.txt: |
+    mqtt-admin:$7$101$hdjaQ6zchKuc3mIl$18Rd9BdckLHu+PPsqEHDtX2zSK7USL8rc2QpR38djjty4sV2InvoDmeFIb8hUJdbMiiyu32gIl6XUZDeym/0gQ==
