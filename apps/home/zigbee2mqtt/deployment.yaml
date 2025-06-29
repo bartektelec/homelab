@@ -23,10 +23,13 @@ spec:
               value: Europe/Oslo
             - name: ZIGBEE2MQTT_CONFIG_MQTT_SERVER
               value: "mqtt://mqtt.homelab.local"
-            # - name: ZIGBEE2MQTT_CONFIG_MQTT_USER
-            #   value: "user"
-            # - name: ZIGBEE2MQTT_CONFIG_MQTT_PASSWORD
-            #   value: "password"
+            - name: ZIGBEE2MQTT_CONFIG_MQTT_USER
+              value: "user"
+            - name: ZIGBEE2MQTT_CONFIG_MQTT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: zigbee2mqtt-secret
+                  key: password
             - name: ZIGBEE2MQTT_CONFIG_HOMEASSISTANT
               value: "true"
             - name: ZIGBEE2MQTT_CONFIG_SERIAL_ADAPTER

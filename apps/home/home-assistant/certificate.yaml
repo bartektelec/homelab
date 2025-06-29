@@ -10,9 +10,9 @@ spec:
   subject:
     organizations:
       - HomeLab
-  commonName: home-assistant.10.0.0.201.nip.io
+  commonName: home-assistant.home.io
   dnsNames:
-    - home-assistant.10.0.0.201.nip.io
+    - home-assistant.home.io
   issuerRef:
     name: selfsigned
     kind: ClusterIssuer
