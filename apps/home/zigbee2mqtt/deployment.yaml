@@ -22,7 +22,7 @@ spec:
             - name: TZ
               value: Europe/Oslo
             - name: ZIGBEE2MQTT_CONFIG_MQTT_SERVER
-              value: "mqtt://mqtt.home.io"
+              value: "mqtt://mosquitto.mosquitto.svc.cluster.local:8883"
             - name: ZIGBEE2MQTT_CONFIG_MQTT_USER
               value: "mqtt-admin"
             - name: ZIGBEE2MQTT_CONFIG_MQTT_PASSWORD
@@ -30,7 +30,7 @@ spec:
                 secretKeyRef:
                   name: zigbee2mqtt-secret
                   key: password
-            - name: ZIGBEE2MQTT_CONFIG_HOMEASSISTANT
+            - name: ZIGBEE2MQTT_CONFIG_HOMEASSISTANT_ENABLED
               value: "true"
             - name: ZIGBEE2MQTT_CONFIG_SERIAL_ADAPTER
               value: "deconz"
