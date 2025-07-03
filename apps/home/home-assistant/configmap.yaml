@@ -1,0 +1,77 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: home-assistant-configmap
+  namespace: home-assistant
+data:
+  configuration.yaml: |
+
+    # Loads default set of integrations. Do not remove.
+    default_config:
+
+    # Load frontend themes from the themes folder
+    frontend:
+      themes: !include_dir_merge_named themes
+      extra_module_url:
+        - /local/community/custom-brand-icons/custom-brand-icons.js
+
+    automation: !include automations.yaml
+    script: !include scripts.yaml
+    scene: !include scenes.yaml
+    sensor:
+      - platform: entur_public_transport
+        number_of_departures: 3
+        show_on_map: true
+        stop_ids:
+          - 'NSR:StopPlace:58864' # train
+          - 'NSR:StopPlace:61490' # bus
+    # xiaomi_miot:
+    #   language: en
+    # command_line:
+    #   - sensor:
+    #     command: '/usr/local/bin/speedtest --json --secure'
+    #     name: SpeedTest Data
+    #     unique_id: speedtest_data
+    #     command_timeout: 90
+    #     scan_interval: 600
+    #     value_template: >
+    #       {{
+    #         {
+    #           "ping": value_json.ping,
+    #           "download": value_json.download,
+    #           "upload": value_json.upload
+    #         }
+    #           | to_json
+    #       }}
+    #     json_attributes:
+    #       - ping
+    #       - download
+    #       - upload
+    #
+    # template:
+    #   - sensor:
+    #     - name: 'SpeedTest CLI Ping'
+    #       unique_id: speedtest_data_ping
+    #       icon: mdi:speedometer
+    #       # TIME_MILLISECONDS: Final = "ms"
+    #       unit_of_measurement: ms
+    #       state_class: measurement
+    #       state: "{{ (states('sensor.speedtest_data') | from_json).ping | round(2) }}"
+    #     - name: 'SpeedTest CLI Download'
+    #       unique_id: speedtest_data_download
+    #       icon: mdi:speedometer
+    #       # DATA_RATE_MEGABITS_PER_SECOND: Final = "Mbit/s"
+    #       unit_of_measurement: Mbit/s
+    #       state_class: measurement
+    #       state: "{{ ((states('sensor.speedtest_data') | from_json).download / 1000 / 1000) | round(2) }}"
+    #     - name: 'SpeedTest CLI Upload'
+    #       unique_id: speedtest_data_upload
+    #       icon: mdi:speedometer
+    #       unit_of_measurement: Mbit/s
+    #       state_class: measurement
+    #       state: "{{ ((states('sensor.speedtest_data') | from_json).upload / 1000 / 1000) | round(2) }}"
+
+    http:
+      use_x_forwarded_for: true
+      trusted_proxies:
+        - 10.42.0.0/24  # Adjust this range to match the internal K3s network (use `kubectl get pods -o wide`)
