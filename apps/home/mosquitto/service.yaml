@@ -9,3 +9,4 @@ spec:
     app: mosquitto
   ports:
     - port: 8883
+    - port: 9001
