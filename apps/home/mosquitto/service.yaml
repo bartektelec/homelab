@@ -4,9 +4,8 @@ metadata:
   name: mosquitto
   namespace: mosquitto
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: mosquitto
   ports:
     - port: 8883
-    - port: 9001
