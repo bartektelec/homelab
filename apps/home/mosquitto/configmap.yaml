@@ -18,4 +18,4 @@ data:
     allow_anonymous false
     password_file /mosquitto/config/password.txt
   password.txt: |
-    mqtt-admin:$7$101$hdjaQ6zchKuc3mIl$18Rd9BdckLHu+PPsqEHDtX2zSK7USL8rc2QpR38djjty4sV2InvoDmeFIb8hUJdbMiiyu32gIl6XUZDeym/0gQ==
+    admin:$7$101$rvrOeXo8IjDJF8aG$nOliJX11sYPCpyddDDGSM3flczHp7Z9iA5EFpg0J79K+eFAS3pEs4ldLXBb60u4tOe/BoYhzmRQDf9/5s56KJQ==
