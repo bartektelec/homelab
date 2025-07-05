@@ -23,6 +23,8 @@ spec:
               value: Europe/Oslo
             - name: ZIGBEE2MQTT_CONFIG_MQTT_SERVER
               value: "mqtt://mosquitto.mosquitto.svc.cluster.local:8883"
+            - name: ZIGBEE2MQTT_CONFIG_MQTT_REJECT_UNAUTHORIZED
+              value: "false"
             - name: ZIGBEE2MQTT_CONFIG_MQTT_USER
               value: "mqtt-admin"
             - name: ZIGBEE2MQTT_CONFIG_MQTT_PASSWORD
