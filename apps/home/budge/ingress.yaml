@@ -17,24 +17,24 @@ spec:
                 name: budge
                 port:
                   number: 80
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: budge-tailscale
-  namespace: budge
-spec:
-  ingressClassName: tailscale
-  rules:
-    - http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: budge
-                port:
-                  number: 80
-  tls:
-    - hosts:
-        - budge.deer-truck.ts.net
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: budge-tailscale
+#   namespace: budge
+# spec:
+#   ingressClassName: tailscale
+#   rules:
+#     - http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: budge
+#                 port:
+#                   number: 80
+#   tls:
+#     - hosts:
+#         - budge.deer-truck.ts.net

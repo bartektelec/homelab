@@ -17,24 +17,24 @@ spec:
                 name: web
                 port:
                   number: 3000
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: maybe-tailscale
-  namespace: maybe
-spec:
-  ingressClassName: tailscale
-  rules:
-    - http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: web
-                port:
-                  number: 3000
-  tls:
-    - hosts:
-        - maybe.deer-truck.ts.net
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: maybe-tailscale
+#   namespace: maybe
+# spec:
+#   ingressClassName: tailscale
+#   rules:
+#     - http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: web
+#                 port:
+#                   number: 3000
+#   tls:
+#     - hosts:
+#         - maybe.deer-truck.ts.net

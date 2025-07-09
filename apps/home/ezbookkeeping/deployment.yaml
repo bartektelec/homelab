@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ezbookkeeping
+  namespace: ezbookkeeping
+  labels:
+    app: ezbookkeeping
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ezbookkeeping
+  template:
+    metadata:
+      labels:
+        app: ezbookkeeping
+    spec:
+      containers:
+        - name: ezbookkeeping
+          image: mayswind/ezbookkeeping:latest
+          volumeMounts:
+            - mountPath: /app
+              name: ezbookkeeping-data
+          ports:
+            - containerPort: 8080
+      volumes:
+        - name: ezbookkeeping-data
+          persistentVolumeClaim:
+            claimName: ezbookkeeping-pvc

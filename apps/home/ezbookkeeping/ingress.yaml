@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ezbookkeeping-traefik
+  namespace: ezbookkeeping
+  annotations:
+    spec.ingressClassName: ezbookkeeping
+spec:
+  rules:
+    - host: ezbookkeeping.home.io
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ezbookkeeping
+                port:
+                  number: 8080
