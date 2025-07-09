@@ -18,6 +18,9 @@ spec:
       containers:
         - name: actual
           image: ghcr.io/actualbudget/actual:latest-alpine
+          env:
+            - name: ACTUAL_PORT
+              value: "5006"
           volumeMounts:
             - mountPath: /data
               name: actual-data
