@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: expenseowl-traefik
+  namespace: expenseowl
+  annotations:
+    spec.ingressClassName: expenseowl
+spec:
+  rules:
+    - host: expenseowl.home.io
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: expenseowl
+                port:
+                  number: 8080

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: expenseowl
+  namespace: expenseowl
+  labels:
+    app: expenseowl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: expenseowl
+  template:
+    metadata:
+      labels:
+        app: expenseowl
+    spec:
+      containers:
+        - name: expenseowl
+          image: tanq16/expenseowl:main
+          volumeMounts:
+            - mountPath: /app
+              name: expenseowl-data
+          ports:
+            - containerPort: 8080
+      volumes:
+        - name: expenseowl-data
+          persistentVolumeClaim:
+            claimName: expenseowl-pvc
