@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
+  namespace: uptime-kuma
   labels:
     app: uptime-kuma
   name: uptime-kuma
