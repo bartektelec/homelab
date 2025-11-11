@@ -8,13 +8,12 @@ metadata:
 
 spec:
   rules:
-    - host: mqtt.home.io
-      http:
+    - http:
         paths:
-          - path: /
+          - path: /mqtt
             pathType: Prefix
             backend:
               service:
                 name: mosquitto
                 port:
-                  number: 8883
+                  name: http

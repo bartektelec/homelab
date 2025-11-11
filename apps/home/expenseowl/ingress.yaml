@@ -7,13 +7,12 @@ metadata:
     spec.ingressClassName: expenseowl
 spec:
   rules:
-    - host: expenseowl.home.io
-      http:
+    - http:
         paths:
-          - path: /
+          - path: /expenseowl
             pathType: Prefix
             backend:
               service:
                 name: expenseowl
                 port:
-                  number: 8080
+                  name: http

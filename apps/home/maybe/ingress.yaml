@@ -7,16 +7,15 @@ metadata:
     traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
   rules:
-    - host: maybe.home.io
-      http:
+    - http:
         paths:
-          - path: /
+          - path: /maybe
             pathType: Prefix
             backend:
               service:
                 name: web
                 port:
-                  number: 3000
+                  name: http
 # ---
 # apiVersion: networking.k8s.io/v1
 # kind: Ingress

@@ -7,16 +7,15 @@ metadata:
     spec.ingressClassName: traefik
 spec:
   rules:
-    - host: budge.home.io
-      http:
+    - http:
         paths:
-          - path: /
+          - path: /budge
             pathType: Prefix
             backend:
               service:
                 name: budge
                 port:
-                  number: 80
+                  name: http
 # ---
 # apiVersion: networking.k8s.io/v1
 # kind: Ingress

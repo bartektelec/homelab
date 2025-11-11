@@ -8,13 +8,12 @@ metadata:
 
 spec:
   rules:
-    - host: z2m.home.io
-      http:
+    - http:
         paths:
-          - path: /
+          - path: /z2m
             pathType: Prefix
             backend:
               service:
                 name: zigbee2mqtt
                 port:
-                  number: 8080
+                  name: http

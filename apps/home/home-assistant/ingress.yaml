@@ -7,16 +7,15 @@ metadata:
     spec.ingressClassName: traefik
 spec:
   rules:
-    - host: home-assistant.home.io
-      http:
+    - http:
         paths:
-          - path: /
+          - path: /home-assistant
             pathType: Prefix
             backend:
               service:
                 name: home-assistant
                 port:
-                  number: 8123
+                  name: http
     - host: home.bartektelechome.duckdns.org
       http:
         paths:
