@@ -8,18 +8,20 @@ metadata:
 
 spec:
   rules:
-    - http:
+    - host: adguard.10.0.0.131.nip.io
+      http:
         paths:
-          - path: /adguard
+          - path: /
             pathType: Prefix
             backend:
               service:
                 name: adguard
                 port:
                   name: http
-    - http:
+    - host: adguard-init.10.0.0.131.nip.io
+      http:
         paths:
-          - path: /adguard-init
+          - path: /
             pathType: Prefix
             backend:
               service:
