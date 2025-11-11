@@ -7,9 +7,10 @@ metadata:
     spec.ingressClassName: actual
 spec:
   rules:
-    - http:
+    - host: actual.home.local
+      http:
         paths:
-          - path: /actual
+          - path: /
             pathType: Prefix
             backend:
               service:

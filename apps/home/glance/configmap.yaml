@@ -51,29 +51,38 @@ data:
                     title: Apps
                     sites:
                       - title: Home Assistant
-                        url: http://home.home.io/
+                        url: http://assistant.home.local/
                         icon: si:homeassistant
                       - title: AdGuard Home
-                        url: http://adguard.home.io/
+                        url: http://adguard.home.local/
                         icon: si:adguard
                       - title: Budge
-                        url: http://budge.home.io/
+                        url: http://budge.home.local/
                         icon: si:cashapp
                       - title: Actual Budget
-                        url: http://actual.home.io/
+                        url: http://actual.home.local/
                         icon: si:actualbudget
+                      - title: Maybe
+                        url: http://maybe.home.local/
+                        icon: si:maybe
+                      - title: MQTT
+                        url: http://mqtt.home.local/
+                        icon: si:mqtt
+                      - title: Zigbee2Mqtt
+                        url: http://z2m.home.local/
+                        icon: si:zigbee2mqtt
                   - type: monitor
                     cache: 1m
                     title: Maintenance
                     sites:
                       - title: Uptime Kuma
-                        url: http://uptime.home.io/
+                        url: http://uptime.home.local/
                         icon: si:uptimekuma
                       - title: Traefik
-                        url: http://traefik.home.io/dashboard/
+                        url: http://traefik.home.local.io/dashboard/
                         icon: si:traefikproxy
                       - title: Headlamp
-                        url: http://monitor.home.io/
+                        url: http://monitor.home.local/
                         icon: si:kubernetes
               - type: group
                 widgets:

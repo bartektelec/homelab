@@ -7,9 +7,10 @@ metadata:
     spec.ingressClassName: ezbookkeeping
 spec:
   rules:
-    - http:
+    - host: ezbook.home.local
+      http:
         paths:
-          - path: /ezbookkeep
+          - path: /
             pathType: Prefix
             backend:
               service:

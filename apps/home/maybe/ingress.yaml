@@ -7,9 +7,10 @@ metadata:
     traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
   rules:
-    - http:
+    - host: maybe.home.local
+      http:
         paths:
-          - path: /maybe
+          - path: /
             pathType: Prefix
             backend:
               service:

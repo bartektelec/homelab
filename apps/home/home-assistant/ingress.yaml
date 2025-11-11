@@ -7,9 +7,10 @@ metadata:
     spec.ingressClassName: traefik
 spec:
   rules:
-    - http:
+    - host: assistant.home.local
+      http:
         paths:
-          - path: /home-assistant
+          - path: /
             pathType: Prefix
             backend:
               service:

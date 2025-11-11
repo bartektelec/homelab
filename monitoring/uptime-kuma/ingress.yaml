@@ -5,7 +5,7 @@ metadata:
   namespace: uptime-kuma
 spec:
   rules:
-    - host: uptime.kube-main.local
+    - host: uptime.home.local
       http:
         paths:
           - path: /

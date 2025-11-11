@@ -8,9 +8,10 @@ metadata:
 
 spec:
   rules:
-    - http:
+    - host: z2m.home.local
+      http:
         paths:
-          - path: /z2m
+          - path: /
             pathType: Prefix
             backend:
               service:

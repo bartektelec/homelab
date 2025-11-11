@@ -3,14 +3,11 @@ kind: Ingress
 metadata:
   name: glance
   namespace: glance
-  annotations:
-    spec.ingressClassName: traefik
-
 spec:
   rules:
     - http:
         paths:
-          - path: /glance
+          - path: /
             pathType: Prefix
             backend:
               service:

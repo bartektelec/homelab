@@ -7,9 +7,10 @@ metadata:
     spec.ingressClassName: expenseowl
 spec:
   rules:
-    - http:
+    - host: expense.home.local
+      http:
         paths:
-          - path: /expenseowl
+          - path: /
             pathType: Prefix
             backend:
               service:

@@ -7,9 +7,10 @@ metadata:
     spec.ingressClassName: traefik
 spec:
   rules:
-    - http:
+    - host: budge.home.local
+      http:
         paths:
-          - path: /budge
+          - path: /
             pathType: Prefix
             backend:
               service:

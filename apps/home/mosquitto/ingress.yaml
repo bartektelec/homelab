@@ -8,9 +8,10 @@ metadata:
 
 spec:
   rules:
-    - http:
+    - host: mqtt.home.local
+      http:
         paths:
-          - path: /mqtt
+          - path: /
             pathType: Prefix
             backend:
               service:

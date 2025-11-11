@@ -10,9 +10,9 @@ spec:
   subject:
     organizations:
       - HomeLab
-  commonName: home-assistant.home.io
+  commonName: home-assistant.home.local.io
   dnsNames:
-    - home-assistant.home.io
+    - home-assistant.home.local.io
   issuerRef:
     name: selfsigned
     kind: ClusterIssuer
