@@ -52,9 +52,11 @@ data:
                     sites:
                       - title: Home Assistant
                         url: http://assistant.home.local/
+                        check-url: http://10.0.0.132:8123/
                         icon: si:homeassistant
                       - title: AdGuard Home
                         url: http://adguard.home.local/
+                        check-url: http://10.0.0.132:8123/
                         icon: si:adguard
                       - title: Budge
                         url: http://budge.home.local/
