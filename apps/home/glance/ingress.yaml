@@ -5,10 +5,11 @@ metadata:
   namespace: glance
 spec:
   rules:
-    - http:
+    - host: glance.home.local
+      http:
         paths:
           - path: /
-            pathType: Exact
+            pathType: Prefix
             backend:
               service:
                 name: glance
