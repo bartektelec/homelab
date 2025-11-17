@@ -58,21 +58,24 @@ data:
                         url: http://adguard.home.local/
                         check-url: http://10.0.0.132:8123/
                         icon: si:adguard
-                      - title: Budge
-                        url: http://budge.home.local/
-                        icon: si:cashapp
                       - title: Actual Budget
                         url: http://actual.home.local/
                         icon: si:actualbudget
-                      - title: Maybe
-                        url: http://maybe.home.local/
-                        icon: si:maybe
-                      - title: MQTT
-                        url: http://mqtt.home.local/
-                        icon: si:mqtt
-                      - title: Zigbee2Mqtt
-                        url: http://z2m.home.local/
-                        icon: si:zigbee2mqtt
+                      - title: Actual Budget
+                        url: http://actual.home.local/
+                        icon: si:actualbudget
+                      - title: Jellyseer
+                        url: http://10.0.0.132:5055
+                        icon: si:jellyseer
+                      - title: Prowlarr
+                        url: http://10.0.0.132:9696
+                        icon: si:prowlarr
+                      - title: Readarr
+                        url: http://10.0.0.132:8787
+                        icon: si:readarr
+                      - title: Jellyfin
+                        url: http://10.0.0.132:8096/                        icon: si:readarr
+                        icon: si:jellyfin
                   - type: monitor
                     cache: 1m
                     title: Maintenance
@@ -107,7 +110,7 @@ data:
             widgets:
               - type: weather
                 location: Oslo, Norway
-                units: metric 
+                units: metric
                 hour-format: 24h # alternatively "24h"
                 # Optionally hide the location from being displayed in the widget
                 # hide-location: true
