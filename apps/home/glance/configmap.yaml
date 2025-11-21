@@ -61,21 +61,37 @@ data:
                       - title: Actual Budget
                         url: http://actual.home.local/
                         icon: si:actualbudget
-                      - title: Actual Budget
-                        url: http://actual.home.local/
-                        icon: si:actualbudget
-                      - title: Jellyseer
-                        url: http://10.0.0.132:5055
-                        icon: si:jellyseer
-                      - title: Prowlarr
-                        url: http://10.0.0.132:9696
-                        icon: si:prowlarr
-                      - title: Readarr
-                        url: http://10.0.0.132:8787
-                        icon: si:readarr
                       - title: Jellyfin
                         url: http://10.0.0.132:8096/
                         icon: si:jellyfin
+                  - type: monitor
+                    cache: 1m
+                    title: Content
+                    sites:
+                      - title: qBittorrent
+                        url: http://homeassistant.local:8081/
+                        check-url: http://10.0.0.132:8081/
+                        icon: si:qbittorrent
+                      - title: Jellyseer
+                        url: http://10.0.0.132:5055
+                        check-url: http://10.0.0.132:5055/
+                        icon: sh:jellyseerr
+                      - title: Prowlarr
+                        url: http://10.0.0.132:9696
+                        check-url: http://10.0.0.132:9696/
+                        icon: sh:prowlarr
+                      - title: Radarr
+                        url: http://10.0.0.132:7878
+                        check-url: http://10.0.0.132:7878/
+                        icon: sh:radarr
+                      - title: Sonarr
+                        url: http://10.0.0.132:8989
+                        check-url: http://10.0.0.132:8989/
+                        icon: sh:sonarr
+                      - title: Readarr
+                        url: http://10.0.0.132:8787
+                        check-url: http://10.0.0.132:8787/
+                        icon: sh:readarr
                   - type: monitor
                     cache: 1m
                     title: Maintenance
