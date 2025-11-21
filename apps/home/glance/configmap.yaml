@@ -74,7 +74,7 @@ data:
                         url: http://10.0.0.132:8787
                         icon: si:readarr
                       - title: Jellyfin
-                        url: http://10.0.0.132:8096/                        icon: si:readarr
+                        url: http://10.0.0.132:8096/
                         icon: si:jellyfin
                   - type: monitor
                     cache: 1m
