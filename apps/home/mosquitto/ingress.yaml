@@ -8,7 +8,7 @@ metadata:
 
 spec:
   rules:
-    - host: mqtt.10.0.0.103.nip.io
+    - host: mqtt.home.local
       http:
         paths:
           - path: /
@@ -17,4 +17,4 @@ spec:
               service:
                 name: mosquitto
                 port:
-                  number: 8883
+                  name: http

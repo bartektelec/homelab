@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ezbookkeeping
+  namespace: ezbookkeeping
+spec:
+  type: ClusterIP
+  selector:
+    app: ezbookkeeping
+  ports:
+    - name: http
+      port: 8080

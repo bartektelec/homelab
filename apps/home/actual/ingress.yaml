@@ -7,7 +7,7 @@ metadata:
     spec.ingressClassName: actual
 spec:
   rules:
-    - host: actual.10.0.0.103.nip.io
+    - host: actual.home.local
       http:
         paths:
           - path: /
@@ -16,25 +16,25 @@ spec:
               service:
                 name: actual
                 port:
-                  number: 5006
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: actual-tailscale
-  namespace: actual
-spec:
-  ingressClassName: tailscale
-  rules:
-    - http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: actual
-                port:
-                  number: 5006
-  tls:
-    - hosts:
-        - actual.deer-truck.ts.net
+                  name: http
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: actual-tailscale
+#   namespace: actual
+# spec:
+#   ingressClassName: tailscale
+#   rules:
+#     - http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: actual
+#                 port:
+#                   number: 5006
+#   tls:
+#     - hosts:
+#         - actual.deer-truck.ts.net

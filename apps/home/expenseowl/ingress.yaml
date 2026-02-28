@@ -1,19 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: k8s-dashboard
-  namespace: kube-system
+  name: expenseowl-traefik
+  namespace: expenseowl
   annotations:
-    spec.ingressClassName: traefik
+    spec.ingressClassName: expenseowl
 spec:
   rules:
-    - host: monitor.home.local.io
+    - host: expense.home.local
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: headlamp
+                name: expenseowl
                 port:
-                  number: 80
+                  name: http

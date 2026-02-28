@@ -17,17 +17,22 @@ spec:
         zigbee: "true"
       containers:
         - name: zigbee2mqtt
-          image: koenkk/zigbee2mqtt:latest
+          image: koenkk/zigbee2mqtt:2.5
           env:
             - name: TZ
               value: Europe/Oslo
             - name: ZIGBEE2MQTT_CONFIG_MQTT_SERVER
-              value: "mqtt://mqtt.10.0.0.103"
-            # - name: ZIGBEE2MQTT_CONFIG_MQTT_USER
-            #   value: "user"
-            # - name: ZIGBEE2MQTT_CONFIG_MQTT_PASSWORD
-            #   value: "password"
-            - name: ZIGBEE2MQTT_CONFIG_HOMEASSISTANT
+              value: "mqtt://mosquitto.mosquitto.svc.cluster.local:8883"
+            - name: ZIGBEE2MQTT_CONFIG_MQTT_REJECT_UNAUTHORIZED
+              value: "false"
+            - name: ZIGBEE2MQTT_CONFIG_MQTT_USER
+              value: "admin"
+            - name: ZIGBEE2MQTT_CONFIG_MQTT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: zigbee2mqtt-secret
+                  key: password
+            - name: ZIGBEE2MQTT_CONFIG_HOMEASSISTANT_ENABLED
               value: "true"
             - name: ZIGBEE2MQTT_CONFIG_SERIAL_ADAPTER
               value: "deconz"

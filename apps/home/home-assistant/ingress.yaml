@@ -5,10 +5,9 @@ metadata:
   namespace: home-assistant
   annotations:
     spec.ingressClassName: traefik
-
 spec:
   rules:
-    - host: home.10.0.0.103.nip.io
+    - host: assistant.home.local
       http:
         paths:
           - path: /
@@ -17,7 +16,7 @@ spec:
               service:
                 name: home-assistant
                 port:
-                  number: 8123
+                  name: http
     - host: home.bartektelechome.duckdns.org
       http:
         paths:
@@ -28,26 +27,27 @@ spec:
                 name: home-assistant
                 port:
                   number: 8123
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: home-assistant-tailscale
-  namespace: home-assistant
-  annotations:
-    spec.ingressClassName: tailscale
-spec:
-  ingressClassName: tailscale
-  tls:
-    - hosts:
-        - home.deer-truck.ts.net
-  rules:
-    - http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: home-assistant
-                port:
-                  number: 8123
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: home-assistant-tailscale
+#   namespace: home-assistant
+#   annotations:
+#     spec.ingressClassName: tailscale
+#     cert-manager.io/cluster-issuer: letsencrypt-staging
+# spec:
+#   ingressClassName: tailscale
+#   tls:
+#     - hosts:
+#         - home.deer-truck.ts.net
+#   rules:
+#     - http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: home-assistant
+#                 port:
+#                   number: 8123

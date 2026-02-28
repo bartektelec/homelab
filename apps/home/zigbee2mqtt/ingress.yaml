@@ -8,7 +8,7 @@ metadata:
 
 spec:
   rules:
-    - host: z2m.10.0.0.103.nip.io
+    - host: z2m.home.local
       http:
         paths:
           - path: /
@@ -17,4 +17,4 @@ spec:
               service:
                 name: zigbee2mqtt
                 port:
-                  number: 8080
+                  name: http
