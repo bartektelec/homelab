@@ -29,14 +29,6 @@ data:
                   - url: https://ishadeed.com/feed.xml
                     title: Ahmad Shadeed
 
-              - type: videos
-                channels:
-                  - UCUyeluBRhGPCW4rPe_UvBZQ # ThePrimeTime
-                  - UCpHDppEe092QBhOtSxJTMqw # Early Morning Dev
-                  - UCXuqSBlHAE6Xw-yeJA0Tunw # Linus Tech Tips
-                  - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
-                  - UCsBjURrPoezykLs9EqgamOA # Fireship
-
 
           - size: full
             widgets:
@@ -64,6 +56,12 @@ data:
                       - title: Jellyfin
                         url: http://10.0.0.132:8096/
                         icon: si:jellyfin
+                      - title: Sure
+                        url: http://10.0.0.107:3000/
+                        icon: sh:sure-finance
+                      - title: N8n
+                        url: http://10.0.0.92:5678/
+                        icon: si:n8n
                   - type: monitor
                     cache: 1m
                     title: Content
@@ -74,24 +72,19 @@ data:
                         icon: si:qbittorrent
                       - title: Jellyseer
                         url: http://10.0.0.132:5055
-                        check-url: http://10.0.0.132:5055/
                         icon: sh:jellyseerr
                       - title: Prowlarr
                         url: http://10.0.0.132:9696
-                        check-url: http://10.0.0.132:9696/
                         icon: sh:prowlarr
                       - title: Radarr
                         url: http://10.0.0.132:7878
-                        check-url: http://10.0.0.132:7878/
                         icon: sh:radarr
                       - title: Sonarr
                         url: http://10.0.0.132:8989
-                        check-url: http://10.0.0.132:8989/
                         icon: sh:sonarr
-                      - title: Readarr
-                        url: http://10.0.0.132:8787
-                        check-url: http://10.0.0.132:8787/
-                        icon: sh:readarr
+                      - title: LazyLibrarian
+                        url: http://10.0.0.110:5299/
+                        icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/lazylibrarian.webp
                   - type: monitor
                     cache: 1m
                     title: Maintenance
@@ -99,12 +92,25 @@ data:
                       - title: Uptime Kuma
                         url: http://uptime.home.local/
                         icon: si:uptimekuma
-                      - title: Traefik
-                        url: http://traefik.home.local.io/dashboard/
-                        icon: si:traefikproxy
-                      - title: Headlamp
-                        url: http://monitor.home.local/
-                        icon: si:kubernetes
+                      - title: Open Media Vault 
+                        url: http://omv.local/
+                        icon: si:openmediavault
+                      - title: NAS
+                        url: http://10.0.0.55/
+                        icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/ugreen-nas.svg
+              - type: videos
+                channels:
+                  - UCUyeluBRhGPCW4rPe_UvBZQ # ThePrimeTime
+                  - UCpHDppEe092QBhOtSxJTMqw # Early Morning Dev
+                  - UCXuqSBlHAE6Xw-yeJA0Tunw # Linus Tech Tips
+                  - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
+                  - UCsBjURrPoezykLs9EqgamOA # Fireship
+                  - UCyU5wkjgQYGRB0hIHMwm2Sg # Syntax.fm
+                  - UCFvPgPdb_emE_bpMZq6hmJQ # Ben Davis
+                  - UCo71RUe6DX4w-Vd47rFLXPg # typecraft
+                  - UC4E2FSKc5czySVKqdsoR26A # TerminalShop
+                  - UCkRbLkvUX5zuwnKOBwFHOjg # Mark builds brands
+
               - type: group
                 widgets:
                   - type: hacker-news
