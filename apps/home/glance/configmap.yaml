@@ -85,6 +85,9 @@ data:
                       - title: LazyLibrarian
                         url: http://10.0.0.110:5299/
                         icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/lazylibrarian.webp
+                      - title: Shelfmark
+                        url: http://10.0.0.114:8084/
+                        icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/lazylibrarian.webp
                   - type: monitor
                     cache: 1m
                     title: Maintenance
